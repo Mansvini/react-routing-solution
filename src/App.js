@@ -37,9 +37,11 @@ function App(){
     
   return (
     <div>
-      Please enter the user ID [0x0, 0x1, 0x2] in the URL path
     <Router>
         <Switch>
+          <Route exact path="/">
+            <div>Please enter the user ID [0x0, 0x1, 0x2] in the URL path</div>
+          </Route>
           <Route path="/:id">
             <User db={db} changeUsername={changeUsername}/>
           </Route>
